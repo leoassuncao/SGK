@@ -1,0 +1,67 @@
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/instructor_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="1dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp">
+
+        <ImageView
+            android:id="@+id/instructor_photo"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:id="@+id/instructor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/instructor_photo"
+            android:textColor="#000"
+            android:layout_marginTop="5dp"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/instructor_graduation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/instructor_name"
+            android:layout_alignLeft="@+id/instructor_name"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/instructor_train"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/instructor_graduation"
+            android:layout_alignLeft="@+id/instructor_name"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/instructor_classes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/instructor_train"
+            android:layout_alignLeft="@+id/instructor_name"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/instructor_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/instructor_classes"
+            android:layout_alignLeft="@+id/instructor_name"
+            android:textSize="13sp" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

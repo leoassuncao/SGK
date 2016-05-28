@@ -46,7 +46,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/news_photo"
-            android:layout_alignParentRight="true"
             android:textColor="#000"
             android:layout_marginTop="8dp"
             android:textSize="13sp"/>
