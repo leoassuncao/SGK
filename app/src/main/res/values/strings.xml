@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Shingetsukan</string>
     <string name="action_settings">Settings</string>
+    <string name="instructors">Instrutores</string>
+    <string name="where_train">Onde Treinar</string>
+    <string name="belt_exam">Exame de Faixa</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

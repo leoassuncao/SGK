@@ -3,9 +3,8 @@ package sgk.com.br.sgk;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -14,24 +13,18 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+
+/**
+ * Created by Leonardo Assunção on 28/05/2016.
+ */
+public class InstructorsActivity extends AppCompatActivity   implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_instructors);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Under Construction", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -81,11 +74,11 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_where_train) {
-            Intent i = new Intent(getApplicationContext(), WhereTrainActivity.class);
+        if (id == R.id.nav_home) {
+            Intent i = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(i);
-        } else if (id == R.id.nav_instrutors) {
-            Intent i = new Intent(getApplicationContext(), InstructorsActivity.class);
+        } else if (id == R.id.nav_where_train) {
+            Intent i = new Intent(getApplicationContext(), WhereTrainActivity.class);
             startActivity(i);
         } else if (id == R.id.nav_belt_exam) {
             Intent i = new Intent(getApplicationContext(), BeltExamActivity.class);
@@ -97,3 +90,4 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 }
+
