@@ -7,4 +7,10 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="yellow_belt">Faixa Amarela</string>
+    <string name="red_belt">Faixa Vermelha</string>
+    <string name="orange_belt">Faixa Laranja</string>
+    <string name="green_belt">Faixa Verde</string>
+    <string name="purple_belt">Faixa Roxa</string>
 </resources>

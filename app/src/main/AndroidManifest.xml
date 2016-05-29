@@ -38,6 +38,21 @@
             android:label="@string/belt_exam"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity
+            android:name=".YellowBeltActivity"
+            android:label="@string/yellow_belt"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".RedBeltActivity"
+            android:label="@string/red_belt"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".OrangeBeltActivity"
+            android:label="@string/orange_belt"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>
