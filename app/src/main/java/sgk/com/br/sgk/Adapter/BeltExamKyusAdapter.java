@@ -1,4 +1,4 @@
-package sgk.com.br.sgk;
+package sgk.com.br.sgk.Adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,6 +7,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.List;
+
+import sgk.com.br.sgk.List.BeltExamKyus;
+import sgk.com.br.sgk.R;
 
 /**
  * Created by Leonardo Assunção on 28/05/2016.

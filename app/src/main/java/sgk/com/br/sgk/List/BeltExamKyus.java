@@ -1,4 +1,4 @@
-package sgk.com.br.sgk;
+package sgk.com.br.sgk.List;
 
 /**
  * Created by Leonardo Assunção on 28/05/2016.

@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".SplashActivity"
+            android:name=".Activity.SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -19,37 +19,37 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".InstructorsActivity"
+            android:name=".Activity.InstructorsActivity"
             android:label="@string/instructors"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".WhereTrainActivity"
+            android:name=".Activity.WhereTrainActivity"
             android:label="@string/where_train"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".BeltExamActivity"
+            android:name=".Activity.BeltExamActivity"
             android:label="@string/belt_exam"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".YellowBeltActivity"
+            android:name=".Activity.YellowBeltActivity"
             android:label="@string/yellow_belt"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".RedBeltActivity"
+            android:name=".Activity.RedBeltActivity"
             android:label="@string/red_belt"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".OrangeBeltActivity"
+            android:name=".Activity.OrangeBeltActivity"
             android:label="@string/orange_belt"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>

@@ -1,9 +1,12 @@
-package sgk.com.br.sgk;
+package sgk.com.br.sgk.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import sgk.com.br.sgk.R;
+
 /**
  * Created by Leonardo Assunção on 27/05/2016.
  */

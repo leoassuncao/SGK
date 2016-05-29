@@ -1,27 +1,28 @@
-package sgk.com.br.sgk;
+package sgk.com.br.sgk.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
+import sgk.com.br.sgk.Adapter.NewsAdapter;
+import sgk.com.br.sgk.Provider.NewsProvider;
+import sgk.com.br.sgk.R;
 
-/**
- * Created by Leonardo Assunção on 28/05/2016.
- */
-public class InstructorsActivity extends AppCompatActivity   implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     private View mRootView;
     private Activity myActivity;
@@ -29,9 +30,18 @@ public class InstructorsActivity extends AppCompatActivity   implements Navigati
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_instructors);
+        setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Under Construction", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -42,7 +52,7 @@ public class InstructorsActivity extends AppCompatActivity   implements Navigati
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        this.loadInstructors();
+        this.loadNews();
     }
 
     @Override
@@ -83,11 +93,11 @@ public class InstructorsActivity extends AppCompatActivity   implements Navigati
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_home) {
-            Intent i = new Intent(getApplicationContext(), MainActivity.class);
-            startActivity(i);
-        } else if (id == R.id.nav_where_train) {
+        if (id == R.id.nav_where_train) {
             Intent i = new Intent(getApplicationContext(), WhereTrainActivity.class);
+            startActivity(i);
+        } else if (id == R.id.nav_instrutors) {
+            Intent i = new Intent(getApplicationContext(), InstructorsActivity.class);
             startActivity(i);
         } else if (id == R.id.nav_belt_exam) {
             Intent i = new Intent(getApplicationContext(), BeltExamActivity.class);
@@ -99,12 +109,11 @@ public class InstructorsActivity extends AppCompatActivity   implements Navigati
         return true;
     }
 
-    private void loadInstructors() {
-        RecyclerView instructor = (RecyclerView) findViewById(R.id.instructor_list);
+    private void loadNews() {
+        RecyclerView news = (RecyclerView) findViewById(R.id.news_list);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this.myActivity);
-        instructor.setLayoutManager(linearLayoutManager);
-        InstructorAdapter adapter = new InstructorAdapter(InstructorProvider.provideInstructorsList(), this.myActivity);
-        instructor.setAdapter(adapter);
+        news.setLayoutManager(linearLayoutManager);
+        NewsAdapter adapter = new NewsAdapter(NewsProvider.provideNewsList(), this.myActivity);
+        news.setAdapter(adapter);
     }
 }
-

@@ -1,7 +1,10 @@
-package sgk.com.br.sgk;
+package sgk.com.br.sgk.Provider;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import sgk.com.br.sgk.List.InstructorsList;
+import sgk.com.br.sgk.R;
 
 /**
  * Created by Leonardo Assunção on 28/05/2016.

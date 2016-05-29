@@ -1,4 +1,4 @@
-package sgk.com.br.sgk;
+package sgk.com.br.sgk.Activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -20,6 +20,10 @@ import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import sgk.com.br.sgk.List.BeltExamKyus;
+import sgk.com.br.sgk.Adapter.BeltExamKyusAdapter;
+import sgk.com.br.sgk.R;
 
 /**
  * Created by Leonardo Assunção on 28/05/2016.
