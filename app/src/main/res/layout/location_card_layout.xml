@@ -1,0 +1,82 @@
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/location_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="1dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="11dp">
+
+
+        <TextView
+            android:id="@+id/location_dojo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginBottom="2dp"
+            />
+
+        <TextView
+            android:id="@+id/location_public"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="2dp"
+            android:textSize="12sp"
+            />
+
+        <View android:id="@+id/separator"
+            android:background="#ccc"
+            android:layout_width = "fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@+id/location_public"
+            android:layout_centerVertical ="true"
+            />
+
+        <ImageView
+            android:id="@+id/location_image"
+            android:layout_below="@+id/separator"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:id="@+id/location_gym"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/location_image"
+            android:layout_below="@+id/separator"
+            android:textColor="#000"
+            android:layout_marginTop="8dp"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/location_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/location_gym"
+            android:layout_alignLeft="@+id/location_gym"
+            android:textSize="13sp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/location_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/location_address"
+            android:layout_alignLeft="@+id/location_address"
+            android:textSize="13sp"
+            android:layout_marginTop="4dp"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

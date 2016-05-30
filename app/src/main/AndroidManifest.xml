@@ -88,6 +88,11 @@
             android:label="@string/second_black_belt"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity
+            android:name=".Activity.ContactActivity"
+            android:label="Contato"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

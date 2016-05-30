@@ -125,12 +125,6 @@ public class BeltExamActivity extends AppCompatActivity implements NavigationVie
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.drawer, menu);
-        return true;
-    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -146,6 +140,9 @@ public class BeltExamActivity extends AppCompatActivity implements NavigationVie
             startActivity(i);
         } else if (id == R.id.nav_instrutors) {
             Intent i = new Intent(getApplicationContext(), InstructorsActivity.class);
+            startActivity(i);
+        } else if (id == R.id.nav_send) {
+            Intent i = new Intent(getApplicationContext(), ContactActivity.class);
             startActivity(i);
         }
 
