@@ -41,7 +41,7 @@ public class ContactActivity extends AppCompatActivity {
                 String message = textMessage.getText().toString();
 
                 Intent email = new Intent(Intent.ACTION_SEND);
-                email.putExtra(Intent.EXTRA_EMAIL, new String[]{"sgkdojo@sgkdojo.com.br"});
+                email.putExtra(Intent.EXTRA_EMAIL, new String[]{"contato@sgkdojo.com.br"});
                 email.putExtra(Intent.EXTRA_SUBJECT, subject);
                 email.putExtra(Intent.EXTRA_TEXT, message);
                 email.setType("message/rfc822");
