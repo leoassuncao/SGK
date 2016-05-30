@@ -135,15 +135,19 @@ public class BeltExamActivity extends AppCompatActivity implements NavigationVie
         if (id == R.id.nav_home) {
             Intent i = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(i);
+            finish();
         } else if (id == R.id.nav_where_train) {
             Intent i = new Intent(getApplicationContext(), WhereTrainActivity.class);
             startActivity(i);
+            finish();
         } else if (id == R.id.nav_instrutors) {
             Intent i = new Intent(getApplicationContext(), InstructorsActivity.class);
             startActivity(i);
+            finish();
         } else if (id == R.id.nav_send) {
             Intent i = new Intent(getApplicationContext(), ContactActivity.class);
             startActivity(i);
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -71,15 +71,19 @@ public class WhereTrainActivity extends AppCompatActivity   implements Navigatio
         if (id == R.id.nav_home) {
             Intent i = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(i);
+            finish();
         } else if (id == R.id.nav_instrutors) {
             Intent i = new Intent(getApplicationContext(), InstructorsActivity.class);
             startActivity(i);
+            finish();
         } else if (id == R.id.nav_belt_exam) {
             Intent i = new Intent(getApplicationContext(), BeltExamActivity.class);
             startActivity(i);
+            finish();
         } else if (id == R.id.nav_send) {
             Intent i = new Intent(getApplicationContext(), ContactActivity.class);
             startActivity(i);
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
