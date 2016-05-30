@@ -1,8 +1,9 @@
-package sgk.com.br.sgk.Activity;
+package sgk.com.br.sgk.Activity.Belts;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.widget.ExpandableListView;
 
 import java.util.ArrayList;
@@ -101,5 +102,18 @@ public class FirstBrownBeltActivity extends AppCompatActivity {
         listDataChild.put(listDataHeader.get(2), kihonippon);
         listDataChild.put(listDataHeader.get(3), shiai);
         listDataChild.put(listDataHeader.get(4), kata);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+        finish();
+
+        return super.onOptionsItemSelected(item);
+
     }
 }

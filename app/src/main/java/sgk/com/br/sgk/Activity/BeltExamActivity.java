@@ -21,6 +21,16 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
+import sgk.com.br.sgk.Activity.Belts.FirstBlackBeltActivity;
+import sgk.com.br.sgk.Activity.Belts.FirstBrownBeltActivity;
+import sgk.com.br.sgk.Activity.Belts.GreenBeltActivity;
+import sgk.com.br.sgk.Activity.Belts.OrangeBeltActivity;
+import sgk.com.br.sgk.Activity.Belts.PurpleBeltActivity;
+import sgk.com.br.sgk.Activity.Belts.RedBeltActivity;
+import sgk.com.br.sgk.Activity.Belts.SecondBlackBeltActivity;
+import sgk.com.br.sgk.Activity.Belts.SecondBrownBeltActivity;
+import sgk.com.br.sgk.Activity.Belts.ThirdBrownBeltActivity;
+import sgk.com.br.sgk.Activity.Belts.YellowBeltActivity;
 import sgk.com.br.sgk.List.BeltExamKyus;
 import sgk.com.br.sgk.Adapter.BeltExamKyusAdapter;
 import sgk.com.br.sgk.R;

@@ -4,19 +4,19 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_home"
             android:title="Início" />
         <item
             android:id="@+id/nav_where_train"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_map_marker"
             android:title="Onde Treinar" />
         <item
             android:id="@+id/nav_instrutors"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_account_multiple"
             android:title="Instrutores" />
         <item
             android:id="@+id/nav_belt_exam"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_trophy"
             android:title="Exame de Faixa" />
     </group>
 

@@ -1,8 +1,9 @@
-package sgk.com.br.sgk.Activity;
+package sgk.com.br.sgk.Activity.Belts;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.widget.ExpandableListView;
 
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ import sgk.com.br.sgk.R;
 /**
  * Created by Leonardo Assunção on 28/05/2016.
  */
-public class RedBeltActivity extends AppCompatActivity {
+public class YellowBeltActivity extends AppCompatActivity {
 
     ExpandableListAdapter listAdapter;
     ExpandableListView expListView;
@@ -26,7 +27,7 @@ public class RedBeltActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.red_belt_activity);
+        setContentView(R.layout.yellow_belt_activity);
 
         // get the listview
         expListView = (ExpandableListView) findViewById(R.id.expandable_list);
@@ -63,36 +64,43 @@ public class RedBeltActivity extends AppCompatActivity {
         kihon.add("Oi-zuki (Zenkutsu-Dachi)");
         kihon.add("Sanbon Ren-zuki (Zenkutsu-Dachi)");
         kihon.add("Gyaku Oi-zuki (Zenkutsu-Dachi)");
-        kihon.add("Gedan Barai / Ren-zuki (dois socos)(Zenkutsu-Dachi)");
-        kihon.add("Jodan Age-uke / Ren-zuki (Zenkutsu-Dachi)");
-        kihon.add("Chudan Soto-uke / Ren-zuki (Zenkutsu-Dachi)");
-        kihon.add("Chudan Uchi-uke / Ren-zuki (Zenkutsu-Dachi)");
-        kihon.add("Chudan Shuto-uke / Gyaku-zuki (Kokutsu-Dachi / Zenkutsu-Dachi)");
-        kihon.add("Mae-geri, Oi-zuki (Zenkutsu-Dachi)");
-        kihon.add("Mawashi-geri, Gyaku-zuki (Zenkutsu-Dachi)");
-        kihon.add("Yoko-geri (Keage e Kekomi) (Kiba-Dachi)");
+        kihon.add("Gedan Barai (Zenkutsu-Dachi)");
+        kihon.add("Jodan Age-uke (Zenkutsu-Dachi)");
+        kihon.add("Chudan Soto-uke (Zenkutsu-Dachi)");
+        kihon.add("Chudan Uchi-uke (Zenkutsu-Dachi)");
+        kihon.add("Chudan Shuto-uke (Kokutsu-Dachi)");
+        kihon.add("Mae-geri (Zenkutsu-Dachi)");
+        kihon.add("Mawashi-geri (Zenkutsu-Dachi)");
+        kihon.add("Yoko-geri (Kiba-Dachi)");
 
         List<String> gohon = new ArrayList<String>();
-        gohon.add("Oi-zuki (Jodan, Chudan e Gedan)");
+        gohon.add("Oi-zuki (Jodan e Chudan)");
         gohon.add("Age-uke (contra-ataque - Gyaku-zuki)");
         gohon.add("Soto-uke (contra-ataque - Gyaku-zuki)");
-        gohon.add("Gedan barai (contra-ataque - Gyaku-zuki)");
-        gohon.add("Uchi-uke (contra-ataque - Gyaku-zuki)");
 
         List<String> kihonippon = new ArrayList<String>();
         kihonippon.add("Oi-zuki (Jodan e Chudan)");
         kihonippon.add("Jodan Age-uke (contra-ataque - Gyaku-zuki)");
         kihonippon.add("Chudan Soto-uke (contra-ataque - Gyaku-zuki)");
-        kihonippon.add("Chudan Uchi-uke (contra-ataque - Gyaku-zuki)");
-        kihonippon.add("Gedan Barai (contra-ataque - Gyaku-zuki)");
 
         List<String> kata = new ArrayList<String>();
         kata.add("Heian Shodan");
-        kata.add("Heian Nidan");
 
         listDataChild.put(listDataHeader.get(0), kihon); // Header, Child data
         listDataChild.put(listDataHeader.get(1), gohon);
         listDataChild.put(listDataHeader.get(2), kihonippon);
         listDataChild.put(listDataHeader.get(3), kata);
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+        finish();
+
+        return super.onOptionsItemSelected(item);
+
     }
 }

@@ -39,52 +39,52 @@
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".Activity.YellowBeltActivity"
+            android:name=".Activity.Belts.YellowBeltActivity"
             android:label="@string/yellow_belt"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".Activity.RedBeltActivity"
+            android:name=".Activity.Belts.RedBeltActivity"
             android:label="@string/red_belt"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".Activity.OrangeBeltActivity"
+            android:name=".Activity.Belts.OrangeBeltActivity"
             android:label="@string/orange_belt"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".Activity.GreenBeltActivity"
+            android:name=".Activity.Belts.GreenBeltActivity"
             android:label="@string/green_belt"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".Activity.PurpleBeltActivity"
+            android:name=".Activity.Belts.PurpleBeltActivity"
             android:label="@string/purple_belt"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".Activity.ThirdBrownBeltActivity"
+            android:name=".Activity.Belts.ThirdBrownBeltActivity"
             android:label="@string/third_brown_belt"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".Activity.SecondBrownBeltActivity"
+            android:name=".Activity.Belts.SecondBrownBeltActivity"
             android:label="@string/second_brown_belt"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".Activity.FirstBrownBeltActivity"
+            android:name=".Activity.Belts.FirstBrownBeltActivity"
             android:label="@string/first_brown_belt"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".Activity.FirstBlackBeltActivity"
+            android:name=".Activity.Belts.FirstBlackBeltActivity"
             android:label="@string/first_black_belt"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".Activity.SecondBlackBeltActivity"
+            android:name=".Activity.Belts.SecondBlackBeltActivity"
             android:label="@string/second_black_belt"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>

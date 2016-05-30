@@ -72,8 +72,7 @@ public class InstructorProvider {
         everton.setInstructor_name("Sensei Everton Rodrigues (SGK)\n");
         everton.setInstructor_graduation("Graduação: 2º Dan (JKA)\n");
         everton.setInstructor_train("Onde Treina: Natal-RN\n");
-        everton.setInstructor_classes("");
-        everton.setInstructor_contact("everton.rodrigues@sgkdojo.com.br\n");
+        everton.setInstructor_classes("everton.rodrigues@sgkdojo.com.br");
 
         return everton;
     }
@@ -110,9 +109,8 @@ public class InstructorProvider {
         martins.setInstructor_photo(R.drawable.rafael_martins);
         martins.setInstructor_name("Sensei Rafael Martins (SGK)\n");
         martins.setInstructor_graduation("Graduação: 1º Dan (JKA)\n");
-        martins.setInstructor_train("\n");
-        martins.setInstructor_classes("Onde dá Aulas: Ippon\n");
-        martins.setInstructor_contact("rafael.martins@sgkdojo.com.br");
+        martins.setInstructor_train("Onde dá Aulas: Ippon\n");
+        martins.setInstructor_classes("rafael.martins@sgkdojo.com.br");
 
         return martins;
     }
@@ -124,8 +122,7 @@ public class InstructorProvider {
         amanda.setInstructor_name("Sensei Amanda Gontijo (SGK)\n");
         amanda.setInstructor_graduation("Graduação: 1º Dan (JKA)\n");
         amanda.setInstructor_train("Onde Treina: Julio Adnet (AJA)\n");
-        amanda.setInstructor_classes("\n");
-        amanda.setInstructor_contact("amanda.gontijo@sgkdojo.com.br");
+        amanda.setInstructor_classes("amanda.gontijo@sgkdojo.com.br");
 
         return amanda;
     }
