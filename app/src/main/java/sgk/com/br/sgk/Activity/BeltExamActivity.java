@@ -71,8 +71,29 @@ public class BeltExamActivity extends AppCompatActivity implements NavigationVie
                 } else if (position == 1){
                     Intent newIntent = new Intent(BeltExamActivity.this, RedBeltActivity.class);
                     startActivity(newIntent);
-                } else {
+                } else if (position == 2){
                     Intent newIntent = new Intent(BeltExamActivity.this, OrangeBeltActivity.class);
+                    startActivity(newIntent);
+                } else if (position == 3) {
+                    Intent newIntent = new Intent(BeltExamActivity.this, GreenBeltActivity.class);
+                    startActivity(newIntent);
+                } else if (position == 4) {
+                    Intent newIntent = new Intent(BeltExamActivity.this, PurpleBeltActivity.class);
+                    startActivity(newIntent);
+                } else if (position == 5) {
+                    Intent newIntent = new Intent(BeltExamActivity.this, ThirdBrownBeltActivity.class);
+                    startActivity(newIntent);
+                } else if (position == 6) {
+                    Intent newIntent = new Intent(BeltExamActivity.this, SecondBrownBeltActivity.class);
+                    startActivity(newIntent);
+                } else if (position == 7) {
+                    Intent newIntent = new Intent(BeltExamActivity.this, FirstBrownBeltActivity.class);
+                    startActivity(newIntent);
+                } else if (position == 8) {
+                    Intent newIntent = new Intent(BeltExamActivity.this, FirstBlackBeltActivity.class);
+                    startActivity(newIntent);
+                } else if (position == 9) {
+                    Intent newIntent = new Intent(BeltExamActivity.this, SecondBlackBeltActivity.class);
                     startActivity(newIntent);
                 }
             }
@@ -149,6 +170,21 @@ public class BeltExamActivity extends AppCompatActivity implements NavigationVie
         kyusList.add(kyu);
 
         kyu = new BeltExamKyus(R.string.purple_belt);
+        kyusList.add(kyu);
+
+        kyu = new BeltExamKyus(R.string.third_brown_belt);
+        kyusList.add(kyu);
+
+        kyu = new BeltExamKyus(R.string.second_brown_belt);
+        kyusList.add(kyu);
+
+        kyu = new BeltExamKyus(R.string.first_brown_belt);
+        kyusList.add(kyu);
+
+        kyu = new BeltExamKyus(R.string.first_black_belt);
+        kyusList.add(kyu);
+
+        kyu = new BeltExamKyus(R.string.second_black_belt);
         kyusList.add(kyu);
 
     }

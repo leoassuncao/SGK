@@ -8,9 +8,14 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="yellow_belt">Faixa Amarela</string>
-    <string name="red_belt">Faixa Vermelha</string>
-    <string name="orange_belt">Faixa Laranja</string>
-    <string name="green_belt">Faixa Verde</string>
-    <string name="purple_belt">Faixa Roxa</string>
+    <string name="yellow_belt">Faixa Amarela - 8º Kyu</string>
+    <string name="red_belt">Faixa Vermelha - 7º Kyu</string>
+    <string name="orange_belt">Faixa Laranja - 6º Kyu</string>
+    <string name="green_belt">Faixa Verde - 5º Kyu</string>
+    <string name="purple_belt">Faixa Roxa - 4º Kyu</string>
+    <string name="third_brown_belt">Faixa Marrom - 3º Kyu</string>
+    <string name="second_brown_belt">Faixa Marrom - 2º Kyu</string>
+    <string name="first_brown_belt">Faixa Marrom - 1º Kyu</string>
+    <string name="first_black_belt">Faixa Preta - 1º Dan</string>
+    <string name="second_black_belt">Faixa Preta - 2º Dan</string>
 </resources>
