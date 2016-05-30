@@ -2,6 +2,7 @@ package sgk.com.br.sgk.Activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.widget.ExpandableListView;
 
 import java.util.ArrayList;
@@ -21,6 +22,7 @@ public class YellowBeltActivity extends AppCompatActivity {
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +38,12 @@ public class YellowBeltActivity extends AppCompatActivity {
 
         // setting list adapter
         expListView.setAdapter(listAdapter);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
     }
 
     /*
@@ -45,38 +53,41 @@ public class YellowBeltActivity extends AppCompatActivity {
         listDataHeader = new ArrayList<String>();
         listDataChild = new HashMap<String, List<String>>();
 
-        // Adding child data
-        listDataHeader.add("Top 250");
-        listDataHeader.add("Now Showing");
-        listDataHeader.add("Coming Soon..");
+        listDataHeader.add("Kihon Waza - Fundamentos ");
+        listDataHeader.add("Gohon Kumite");
+        listDataHeader.add("Kihon Ippon Kumite");
+        listDataHeader.add("Kata");
 
         // Adding child data
-        List<String> top250 = new ArrayList<String>();
-        top250.add("The Shawshank Redemption");
-        top250.add("The Godfather");
-        top250.add("The Godfather: Part II");
-        top250.add("Pulp Fiction");
-        top250.add("The Good, the Bad and the Ugly");
-        top250.add("The Dark Knight");
-        top250.add("12 Angry Men");
+        List<String> kihon = new ArrayList<String>();
+        kihon.add("Oi-zuki (Zenkutsu-Dachi)");
+        kihon.add("Sanbon Ren-zuki (Zenkutsu-Dachi)");
+        kihon.add("Gyaku Oi-zuki (Zenkutsu-Dachi)");
+        kihon.add("Gedan Barai (Zenkutsu-Dachi)");
+        kihon.add("Jodan Age-uke (Zenkutsu-Dachi)");
+        kihon.add("Chudan Soto-uke (Zenkutsu-Dachi)");
+        kihon.add("Chudan Uchi-uke (Zenkutsu-Dachi)");
+        kihon.add("Chudan Shuto-uke (Kokutsu-Dachi)");
+        kihon.add("Mae-geri (Zenkutsu-Dachi)");
+        kihon.add("Mawashi-geri (Zenkutsu-Dachi)");
+        kihon.add("Yoko-geri (Kiba-Dachi)");
 
-        List<String> nowShowing = new ArrayList<String>();
-        nowShowing.add("The Conjuring");
-        nowShowing.add("Despicable Me 2");
-        nowShowing.add("Turbo");
-        nowShowing.add("Grown Ups 2");
-        nowShowing.add("Red 2");
-        nowShowing.add("The Wolverine");
+        List<String> gohon = new ArrayList<String>();
+        gohon.add("Oi-zuki (Jodan e Chudan)");
+        gohon.add("Age-uke (contra-ataque - Gyaku-zuki)");
+        gohon.add("Soto-uke (contra-ataque - Gyaku-zuki)");
 
-        List<String> comingSoon = new ArrayList<String>();
-        comingSoon.add("2 Guns");
-        comingSoon.add("The Smurfs 2");
-        comingSoon.add("The Spectacular Now");
-        comingSoon.add("The Canyons");
-        comingSoon.add("Europa Report");
+        List<String> kihonippon = new ArrayList<String>();
+        kihonippon.add("Oi-zuki (Jodan e Chudan)");
+        kihonippon.add("Jodan Age-uke (contra-ataque - Gyaku-zuki)");
+        kihonippon.add("Chudan Soto-uke (contra-ataque - Gyaku-zuki)");
 
-        listDataChild.put(listDataHeader.get(0), top250); // Header, Child data
-        listDataChild.put(listDataHeader.get(1), nowShowing);
-        listDataChild.put(listDataHeader.get(2), comingSoon);
+        List<String> kata = new ArrayList<String>();
+        kata.add("Heian Shodan");
+
+        listDataChild.put(listDataHeader.get(0), kihon); // Header, Child data
+        listDataChild.put(listDataHeader.get(1), gohon);
+        listDataChild.put(listDataHeader.get(2), kihonippon);
+        listDataChild.put(listDataHeader.get(3), kata);
     }
 }
