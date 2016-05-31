@@ -15,23 +15,6 @@
         android:layout_height="wrap_content"
         android:padding="11dp">
 
-        <TextView
-            android:id="@+id/news_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginBottom="2dp"
-            android:textSize="12sp"
-            />
-
-        <View android:id="@+id/separator"
-            android:background="#ccc"
-            android:layout_width = "fill_parent"
-            android:layout_height="1dip"
-            android:layout_below="@+id/news_date"
-            android:layout_centerVertical ="true"
-            />
-
         <ImageView
             android:id="@+id/news_photo"
             android:layout_below="@+id/separator"

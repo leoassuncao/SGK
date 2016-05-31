@@ -2,6 +2,7 @@ package sgk.com.br.sgk.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -66,18 +67,23 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_where_train) {
             Intent i = new Intent(getApplicationContext(), WhereTrainActivity.class);
             startActivity(i);
-            finish();
         } else if (id == R.id.nav_instrutors) {
             Intent i = new Intent(getApplicationContext(), InstructorsActivity.class);
             startActivity(i);
-            finish();
         } else if (id == R.id.nav_belt_exam) {
             Intent i = new Intent(getApplicationContext(), BeltExamActivity.class);
             startActivity(i);
-            finish();
         } else if (id == R.id.nav_send) {
             Intent i = new Intent(getApplicationContext(), ContactActivity.class);
             startActivity(i);
+        }else if (id == R.id.nav_facebook) {
+            //TODO: change the profile link
+            try {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://profile/426253597411506"));
+                startActivity(intent);
+            }catch(Exception e) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.facebook.com/appetizerandroid")));
+            }
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

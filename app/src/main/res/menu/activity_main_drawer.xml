@@ -23,10 +23,14 @@
     <item android:title="Comunicação">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Compartilhe" />
+                android:id="@+id/nav_facebook"
+                android:icon="@drawable/ic_facebook_box"
+                android:title="Facebook" />
             <item
+                android:id="@+id/nav_instagram"
+                android:icon="@drawable/ic_instagram"
+                android:title="Instagram" />
+           <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
                 android:title="Contato" />

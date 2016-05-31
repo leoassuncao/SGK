@@ -5,18 +5,10 @@ package sgk.com.br.sgk.List;
  */
 public class NewsList {
 
-    private String news_date;
     private String news_title;
     private String news_details;
     private int news_photo;
 
-    public String getNews_date() {
-        return news_date;
-    }
-
-    public void setNews_date(String news_date) {
-        this.news_date = news_date;
-    }
 
     public String getNews_title() {
         return news_title;

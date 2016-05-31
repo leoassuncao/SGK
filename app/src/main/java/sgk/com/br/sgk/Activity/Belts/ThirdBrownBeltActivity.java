@@ -55,51 +55,45 @@ public class ThirdBrownBeltActivity extends AppCompatActivity {
         listDataHeader.add("Kihon Waza - Fundamentos ");
         listDataHeader.add("Jyu Ippon Kumite");
         listDataHeader.add("Kihon Ippon Kumite");
-        listDataHeader.add("Shiai Kumite");
+        listDataHeader.add("Jiyu Kumite");
         listDataHeader.add("Kata");
 
         // Adding child data
         List<String> kihon = new ArrayList<String>();
-        kihon.add("Oi-zuki (Kamae - Base Livre)");
         kihon.add("Oi-zuki, Gyaku-zuki (Kamae - Base Livre)");
         kihon.add("Gyaku Oi-zuki (Kamae - Base Livre)");
         kihon.add("Kizami-zuki, Oi-zuki, Gyaku-zuki (Kamae - Base Livre)");
         kihon.add("Gedan Barai / Gyaku-zuki (Kamae - Base Livre)");
         kihon.add("Jodan Age-uke / Gyaku-zuki (Kamae - Base Livre)");
-        kihon.add("Chudan Soto-uke / Yoko-Enpi, Ukaren-Uchi, Gyaku-zuki (Kamae - Base Livre)");
-        kihon.add("Chudan Uchi-uke / Kizami-zuki, Gyaku-zuki (Kamae - Base Livre)");
-        kihon.add("Chudan Shuto-uke / Kizami-geri, Gyaku-zuki (Kamae - Base Livre)");
+        kihon.add("Chudan Soto-uke / Kizami-zuki, Gyaku-zuki (Kamae - Base Livre)");
+        kihon.add("Chudan Uchi-uke / Yoko-enpi, Uraken-uchi, Gyaku-zuki (Kamae - Base Livre)");
+        kihon.add("Chudan Shuto-uke / Kizami Mawashi-geri, Gyaku-zuki (Kamae - Base Livre)");
         kihon.add("Mae-geri, Oi-zuki, Gyaku-zuki (Kamae - Base Livre)");
         kihon.add("Mawashi-geri, Gyaku-zuki (Kamae - Base Livre)");
-        kihon.add("Yoko-geri, Uraken-uchi, Gyaku-zuki (Kamae - Base Livre)");
-        kihon.add("Fumikomi, Gyaku-zuki (Kamae - Zenkutsu-Dachi)");
+        kihon.add("Yoko-geri, Yoko-enpi, Uraken-uchi, Gyaku-zuki (Kamae - Base Livre)");
+        kihon.add("Fumikomi, Uraken-uchi, Gyaku-zuki (Kamae - Base Livre)");
         kihon.add("Ura Kakato-geri, Gyaku-zuki (Kamae - Base Livre)");
+        kihon.add("Ushiro-geri, Gyaku-zuki (Kamae - Base Livre)");
 
         List<String> jyuippon = new ArrayList<String>();
-        jyuippon.add("Oi-zuki (Chudan)");
-        jyuippon.add("Mae-geri (Kekomi)");
-        jyuippon.add("Mawashi-geri (Jodan)");
-        jyuippon.add("Yoko-geri (Kekomi)");
-        jyuippon.add("Livre (Gedan Barai, Chudan Soto-uke, Chudan Uchi-uke, Jodan e Chudan Shuto-uke) (contra-ataque - Livre)");
+        jyuippon.add("Livre (Demonstrando técnicas dominadas)");
 
         List<String> kihonippon = new ArrayList<String>();
-        kihonippon.add("Oi-zuki (Jodan e Chudan)");
-        kihonippon.add("Mae-geri (Chudan)");
-        kihonippon.add("Mawashi-geri (Jodan)");
-        kihonippon.add("Yoko-geri (Kekomi)");
-        kihonippon.add("Livre (Esquivar com a defesa e contra atacar) (contra-ataque - Livre)");
+        kihonippon.add("Ataque livre (Demonstrando técnicas dominadas)");
+        kihonippon.add("Defesa livre (Demonstrando técnicas dominadas) (contra-ataque - Livre) ");
 
         List<String> kata = new ArrayList<String>();
-        kata.add("Heian Godan");
+        kata.add("Tekki Shodan");
+        kata.add("Bassai Dai");
         kata.add("Kata escolhido pela banca");
 
-        List<String> shiai = new ArrayList<String>();
-        shiai.add("Ataque/Defesa - Técnicas apresentadas no Kihon");
+        List<String> jiyu = new ArrayList<String>();
+        jiyu.add("Livre (Demonstrando técnicas dominadas) (COM CONTROLE)");
 
         listDataChild.put(listDataHeader.get(0), kihon); // Header, Child data
         listDataChild.put(listDataHeader.get(1), jyuippon);
         listDataChild.put(listDataHeader.get(2), kihonippon);
-        listDataChild.put(listDataHeader.get(3), shiai);
+        listDataChild.put(listDataHeader.get(3), jiyu);
         listDataChild.put(listDataHeader.get(4), kata);
     }
 
