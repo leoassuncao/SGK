@@ -78,8 +78,7 @@ public class InstructorsActivity extends AppCompatActivity   implements Navigati
         } else if (id == R.id.nav_send) {
             Intent i = new Intent(getApplicationContext(), ContactActivity.class);
             startActivity(i);
-
-        }
+        } 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

@@ -76,14 +76,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_send) {
             Intent i = new Intent(getApplicationContext(), ContactActivity.class);
             startActivity(i);
-        }else if (id == R.id.nav_facebook) {
-            //TODO: change the profile link
-            try {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://profile/426253597411506"));
-                startActivity(intent);
-            }catch(Exception e) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.facebook.com/appetizerandroid")));
-            }
+        } else if (id == R.id.nav_facebook) {
+           openFacebook();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -97,5 +91,14 @@ public class MainActivity extends AppCompatActivity
         news.setLayoutManager(linearLayoutManager);
         NewsAdapter adapter = new NewsAdapter(NewsProvider.provideNewsList(), this.myActivity);
         news.setAdapter(adapter);
+    }
+
+    public void openFacebook()  {
+        try {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://facewebmodal/f?href=" + "https://www.facebook.com/ShingetsuKan-Karate-Do-Dojo-185814311516817/?fref=ts"));
+            startActivity(intent);
+        }catch(Exception e) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.facebook.com/appetizerandroid")));
+        }
     }
 }
