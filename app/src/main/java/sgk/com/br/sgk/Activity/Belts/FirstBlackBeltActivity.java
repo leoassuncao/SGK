@@ -53,54 +53,46 @@ public class FirstBlackBeltActivity extends AppCompatActivity {
         listDataChild = new HashMap<String, List<String>>();
 
         listDataHeader.add("Kihon Waza - Fundamentos ");
-        listDataHeader.add("Jyu Ippon Kumite");
-        listDataHeader.add("Kihon Ippon Kumite");
-        listDataHeader.add("Shiai Kumite");
+        listDataHeader.add("Jiyu Ippon Kumite");
+        listDataHeader.add("Jiyu Kumite");
         listDataHeader.add("Kata");
 
         // Adding child data
         List<String> kihon = new ArrayList<String>();
-        kihon.add("Oi-zuki (Kamae - Base Livre)");
-        kihon.add("Oi-zuki, Gyaku-zuki (Kamae - Base Livre)");
-        kihon.add("Gyaku Oi-zuki (Kamae - Base Livre)");
-        kihon.add("Kizami-zuki, Oi-zuki, Gyaku-zuki (Kamae - Base Livre)");
-        kihon.add("Gedan Barai / Gyaku-zuki (Kamae - Base Livre)");
-        kihon.add("Jodan Age-uke / Gyaku-zuki (Kamae - Base Livre)");
-        kihon.add("Chudan Soto-uke / Yoko-Enpi, Ukaren-Uchi, Gyaku-zuki (Kamae - Base Livre)");
-        kihon.add("Chudan Uchi-uke / Kizami-zuki, Gyaku-zuki (Kamae - Base Livre)");
-        kihon.add("Chudan Shuto-uke / Kizami-geri, Gyaku-zuki (Kamae - Base Livre)");
-        kihon.add("Mae-geri, Oi-zuki, Gyaku-zuki (Kamae - Base Livre)");
-        kihon.add("Mawashi-geri, Gyaku-zuki (Kamae - Base Livre)");
-        kihon.add("Yoko-geri, Uraken-uchi, Gyaku-zuki (Kamae - Base Livre)");
-        kihon.add("Fumikomi, Gyaku-zuki (Kamae - Zenkutsu-Dachi)");
-        kihon.add("Ura Kakato-geri, Gyaku-zuki (Kamae - Base Livre)");
+        kihon.add("Oi-zuki Jodan, Gyaku-zuki Chudan (Zenkutsu-Dachi)");
+        kihon.add("Sanbon Ren-zuki (Zenkutsu-Dachi)");
+        kihon.add("Jodan Age-uke / Gyaku-zuki (Zenkutsu-Dachi)");
+        kihon.add("Chudan Soto-uke / Yoko-enpi, Uraken-uchi, Gyaku-zuki (Zenkutsu-Dachi)");
+        kihon.add("Chudan Uchi-uke / Kizami-zuki, Gyaku-zuki (Zenkutsu-Dachi)");
+        kihon.add("Gedan Barai / Gyaku-zuki (Zenkutsu-Dachi)");
+        kihon.add("Mae-geri (Zenkutsu-Dachi)");
+        kihon.add("Yoko-geri Keage(Kiba-Dachi)");
+        kihon.add("Yoko-geri Kekomi(Kiba-Dachi)");
+        kihon.add("Yoko-geri Kekomi(Zenkutsu-Dachi)");
+        kihon.add("Ushiro-geri (Zenkutsu-Dachi)");
+        kihon.add("Chudan Shuto-uke / Kizami Mae-geri, Nukite (Kokutsu/Zenkutsu-Dachi)");
 
         List<String> jyuippon = new ArrayList<String>();
+        jyuippon.add("Oi-zuki (Jodan)");
         jyuippon.add("Oi-zuki (Chudan)");
         jyuippon.add("Mae-geri (Kekomi)");
         jyuippon.add("Mawashi-geri (Jodan)");
         jyuippon.add("Yoko-geri (Kekomi)");
-        jyuippon.add("Livre (Gedan Barai, Chudan Soto-uke, Chudan Uchi-uke, Jodan e Chudan Shuto-uke) (contra-ataque - Livre)");
+        jyuippon.add("Ushiro-geri (Chudan)");
+        jyuippon.add("Livre (contra-ataque - Livre) (Domínio da distância e defesa e contra-ataque)");
 
-        List<String> kihonippon = new ArrayList<String>();
-        kihonippon.add("Oi-zuki (Jodan e Chudan)");
-        kihonippon.add("Mae-geri (Chudan)");
-        kihonippon.add("Mawashi-geri (Jodan)");
-        kihonippon.add("Yoko-geri (Kekomi)");
-        kihonippon.add("Livre (Esquivar com a defesa e contra atacar) (contra-ataque - Livre)");
+        List<String> jyukumite = new ArrayList<String>();
+        jyukumite.add("Livre (Demonstrando técnicas dominadas. Domínio da distância, defesa e contra-ataque) (COM CONTROLE)");
 
         List<String> kata = new ArrayList<String>();
-        kata.add("Heian Godan");
-        kata.add("Kata escolhido pela banca");
+        kata.add("Sentei Kata");
 
-        List<String> shiai = new ArrayList<String>();
-        shiai.add("Ataque/Defesa - Técnicas apresentadas no Kihon");
+
 
         listDataChild.put(listDataHeader.get(0), kihon); // Header, Child data
         listDataChild.put(listDataHeader.get(1), jyuippon);
-        listDataChild.put(listDataHeader.get(2), kihonippon);
-        listDataChild.put(listDataHeader.get(3), shiai);
-        listDataChild.put(listDataHeader.get(4), kata);
+        listDataChild.put(listDataHeader.get(2), jyukumite);
+        listDataChild.put(listDataHeader.get(3), kata);
     }
 
     @Override
