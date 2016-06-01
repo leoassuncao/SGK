@@ -56,6 +56,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Enviar"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:theme="@style/Button"
+        android:textColor="#ffffff"/>
 
 </LinearLayout>
