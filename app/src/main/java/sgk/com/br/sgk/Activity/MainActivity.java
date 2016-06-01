@@ -1,6 +1,7 @@
 package sgk.com.br.sgk.Activity;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import sgk.com.br.sgk.Adapter.NewsAdapter;
 import sgk.com.br.sgk.Provider.NewsProvider;
@@ -77,7 +79,11 @@ public class MainActivity extends AppCompatActivity
             Intent i = new Intent(getApplicationContext(), ContactActivity.class);
             startActivity(i);
         } else if (id == R.id.nav_facebook) {
-           openFacebook();
+            Toast.makeText(this, "Redirecionando... ", Toast.LENGTH_LONG).show();
+            openFacebook();
+        } else if (id == R.id.nav_instagram) {
+            Toast.makeText(this, "Redirecionando...", Toast.LENGTH_LONG).show();
+            openInstagram();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -99,6 +105,20 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
         }catch(Exception e) {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.facebook.com/appetizerandroid")));
+        }
+    }
+
+    public void openInstagram() {
+        Uri uri = Uri.parse("http://instagram.com/_u/shingetsukan");
+        Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
+
+        likeIng.setPackage("com.instagram.android");
+
+        try {
+            startActivity(likeIng);
+        } catch (ActivityNotFoundException e) {
+            startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("http://instagram.com/shingetsukan")));
         }
     }
 }
