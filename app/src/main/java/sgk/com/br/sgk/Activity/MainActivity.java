@@ -79,10 +79,10 @@ public class MainActivity extends AppCompatActivity
             Intent i = new Intent(getApplicationContext(), ContactActivity.class);
             startActivity(i);
         } else if (id == R.id.nav_facebook) {
-            Toast.makeText(this, "Redirecionando... ", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Redirecionando... ", Toast.LENGTH_SHORT).show();
             openFacebook();
         } else if (id == R.id.nav_instagram) {
-            Toast.makeText(this, "Redirecionando...", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Redirecionando...", Toast.LENGTH_SHORT).show();
             openInstagram();
         }
 

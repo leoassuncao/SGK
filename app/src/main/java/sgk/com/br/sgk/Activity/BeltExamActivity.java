@@ -1,7 +1,9 @@
 package sgk.com.br.sgk.Activity;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -17,6 +19,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -147,7 +150,12 @@ public class BeltExamActivity extends AppCompatActivity implements NavigationVie
         } else if (id == R.id.nav_send) {
             Intent i = new Intent(getApplicationContext(), ContactActivity.class);
             startActivity(i);
-
+        } else if (id == R.id.nav_facebook) {
+            Toast.makeText(this, "Redirecionando... ", Toast.LENGTH_SHORT).show();
+            openFacebook();
+        } else if (id == R.id.nav_instagram) {
+            Toast.makeText(this, "Redirecionando...", Toast.LENGTH_SHORT).show();
+            openInstagram();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -246,6 +254,29 @@ public class BeltExamActivity extends AppCompatActivity implements NavigationVie
         @Override
         public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
 
+        }
+    }
+
+    public void openFacebook()  {
+        try {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://facewebmodal/f?href=" + "https://www.facebook.com/ShingetsuKan-Karate-Do-Dojo-185814311516817/?fref=ts"));
+            startActivity(intent);
+        }catch(Exception e) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.facebook.com/appetizerandroid")));
+        }
+    }
+
+    public void openInstagram() {
+        Uri uri = Uri.parse("http://instagram.com/_u/shingetsukan");
+        Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
+
+        likeIng.setPackage("com.instagram.android");
+
+        try {
+            startActivity(likeIng);
+        } catch (ActivityNotFoundException e) {
+            startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("http://instagram.com/shingetsukan")));
         }
     }
 }
