@@ -3,4 +3,15 @@
     <color name="colorPrimary">#222</color>
     <color name="colorPrimaryDark">#000</color>
     <color name="colorAccent">#ff0000</color>
+
+    <!--BELT COLORS-->
+    <color name="yellow_belt">#FFCC00</color>
+    <color name="red_belt">#ff0000</color>
+    <color name="orange_belt">#FFA500</color>
+    <color name="green_belt">#00cc00</color>
+    <color name="purple_belt">#800080</color>
+    <color name="brown_belt">#8B4513</color>
+    <color name="black_belt">#000000</color>
+
+
 </resources>

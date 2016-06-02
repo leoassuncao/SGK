@@ -1,13 +1,22 @@
 <resources>
+    <!--Activities -->
     <string name="app_name">Shingetsukan</string>
-    <string name="action_settings">Settings</string>
     <string name="instructors">Instrutores</string>
     <string name="where_train">Onde Treinar</string>
     <string name="belt_exam">Exame de Faixa</string>
+    <string name="karate">Karate-Do Kyokai</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+    <!--DRAWER-->
+    <string name="home">Início</string>
+    <string name="communication">Comunicação</string>
+    <string name="facebook">Facebook</string>
+    <string name="instagram">Instagram</string>
+    <string name="contact">Contato</string>
+
+    <!--FAIAXAS -->
     <string name="yellow_belt">Faixa Amarela - 8º Kyu</string>
     <string name="red_belt">Faixa Vermelha - 7º Kyu</string>
     <string name="orange_belt">Faixa Laranja - 6º Kyu</string>
@@ -18,4 +27,9 @@
     <string name="first_brown_belt">Faixa Marrom - 1º Kyu</string>
     <string name="first_black_belt">Faixa Preta - 1º Dan</string>
     <string name="second_black_belt">Faixa Preta - 2º Dan</string>
+
+    <!--CONTATO-->
+    <string name="subject">Assunto: </string>
+    <string name="message">Mensagem: </string>
+    <string name="send">Enviar</string>
 </resources>
