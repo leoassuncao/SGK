@@ -18,6 +18,7 @@ public class NewsProvider {
         news.add(NewsProvider.setSecond());
         news.add(NewsProvider.setThird());
         news.add(NewsProvider.setFourth());
+        news.add(NewsProvider.setFifth());
         return news;
     }
 
@@ -25,7 +26,7 @@ public class NewsProvider {
         NewsList first = new NewsList();
         first.setNews_title("3º Campeonato Brasiliense de Karate-Do (JKA) | 2016");
         first.setNews_photo(R.drawable.pic_first);
-        first.setNews_details("A SGK abre as inscrições para o 3º Campeonato Brasiliense de Karate-do JKA. Acesse o link abaixo para comprar na plataformas de venda Sympla, aqui você pode até mesmo dividir a sua inscrição de modo rápido e fácil, acesse:");
+        first.setNews_details("A SGK abre as inscrições para o 3º Campeonato Brasiliense de Karate-do JKA. Acesse o nosso site para comprar na plataformas de venda Sympla, aqui você pode até mesmo dividir a sua inscrição de modo rápido e fáci.");
         return first;
     }
 
@@ -42,7 +43,7 @@ public class NewsProvider {
         NewsList third = new NewsList();
         third.setNews_title("2º Campeonato Brasiliense de Karate-Do (JKA) | 2015");
         third.setNews_photo(R.drawable.pic_third);
-        third.setNews_details("A SGK organizou, no dia 28 de março de 2015, o 2º Campeonato Brasiliense de Karate-do JKA. Parabéns aos karatekas que participaram do campeonato, sua dedicação fez pelo esforço tornaram o evento um sucesso. Clique aqui para acessar as fotos do evento."
+        third.setNews_details("A SGK organizou, no dia 28 de março de 2015, o 2º Campeonato Brasiliense de Karate-do JKA. Parabéns aos karatekas que participaram do campeonato, sua dedicação fez pelo esforço tornaram o evento um sucesso."
                 );
         return third;
     }
@@ -54,5 +55,13 @@ public class NewsProvider {
         fourth.setNews_details("Parabéns à atleta da SGK Sara Mauá!! Sara foi campeã em Kata Individual e Kumite Individual em sua categoria (Juvenil Feminino – 19 a 21 anos)."
                 );
         return fourth;
+    }
+
+    private static NewsList setFifth() {
+        NewsList fifth = new NewsList();
+        fifth.setNews_title("XV Campeonato Brasileiro JKA - 2014 | Equipe SGK");
+        fifth.setNews_photo(R.drawable.pic_fifth);
+        fifth.setNews_details("A SGK, representou Brasília no XV Campeonato Brasileiro de Karate-do JKA, realizado nos dias 10 e 11 de Maio no Nippon Coutry Club em Arujá/SP. Parabéns à equipe brasiliense pelo ótimo desempenho, esforço e dedicação.");
+        return fifth;
     }
 }
