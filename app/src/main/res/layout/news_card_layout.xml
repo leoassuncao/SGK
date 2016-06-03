@@ -7,8 +7,7 @@
     card_view:cardUseCompatPadding="true"
     card_view:cardCornerRadius="4dp"
     card_view:cardElevation="1dp"
-    android:foreground="?android:attr/selectableItemBackground"
-    android:clickable="true">
+    android:foreground="?android:attr/selectableItemBackground">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -31,7 +30,7 @@
             android:layout_below="@+id/news_photo"
             android:textColor="#000"
             android:layout_marginTop="8dp"
-            android:textSize="13sp"/>
+            android:textSize="14sp"/>
 
         <TextView
             android:id="@+id/news_details"
