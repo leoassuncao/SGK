@@ -5,35 +5,35 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_home"
-            android:title="@string/home" />
+            android:title="Início" />
         <item
             android:id="@+id/nav_where_train"
             android:icon="@drawable/ic_map_marker"
-            android:title="@string/where_train" />
+            android:title="Onde Treinar" />
         <item
             android:id="@+id/nav_instrutors"
             android:icon="@drawable/ic_account_multiple"
-            android:title="@string/instructors" />
+            android:title="Instrutores" />
         <item
             android:id="@+id/nav_belt_exam"
             android:icon="@drawable/ic_trophy"
-            android:title="@string/belt_exam" />
+            android:title="Exame de Faixa" />
     </group>
 
-    <item android:title="@string/communication">
+    <item android:title="Comunicação">
         <menu>
             <item
                 android:id="@+id/nav_facebook"
                 android:icon="@drawable/ic_facebook_box"
-                android:title="@string/facebook" />
+                android:title="Facebook" />
             <item
                 android:id="@+id/nav_instagram"
                 android:icon="@drawable/ic_instagram"
-                android:title="@string/instagram" />
+                android:title="Instagram" />
            <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
-                android:title="@string/contact" />
+                android:title="Contato" />
         </menu>
     </item>
 
