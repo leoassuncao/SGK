@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "54772255889",
+    "firebase_url": "https://shingetsukan.firebaseio.com",
+    "project_id": "project-4103737641201050378",
+    "storage_bucket": "project-4103737641201050378.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:54772255889:android:84ddc842090e92e6",
+        "android_client_info": {
+          "package_name": "sgk.com.br.sgk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "54772255889-j51fg45rhhmv7eusrfv82g6pcssnbi9v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEvRgyVinEYgQb47LpoYK-iajmFJUcwC4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
