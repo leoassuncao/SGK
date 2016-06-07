@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "54772255889",
-    "firebase_url": "https://shingetsukan.firebaseio.com",
-    "project_id": "project-4103737641201050378",
-    "storage_bucket": "project-4103737641201050378.appspot.com"
+    "project_number": "1062199843261",
+    "firebase_url": "https://shingetsukan-fca85.firebaseio.com",
+    "project_id": "shingetsukan-fca85",
+    "storage_bucket": "shingetsukan-fca85.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:54772255889:android:84ddc842090e92e6",
+        "mobilesdk_app_id": "1:1062199843261:android:84ddc842090e92e6",
         "android_client_info": {
           "package_name": "sgk.com.br.sgk"
         }
       },
       "oauth_client": [
         {
-          "client_id": "54772255889-j51fg45rhhmv7eusrfv82g6pcssnbi9v.apps.googleusercontent.com",
+          "client_id": "1062199843261-a879fpn140bpge73bhel0f0oe35krb57.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDEvRgyVinEYgQb47LpoYK-iajmFJUcwC4"
+          "current_key": "AIzaSyAMj0OtgoQ-sbrYkU9yUPxkx7D77mnTby4"
         }
       ],
       "services": {
