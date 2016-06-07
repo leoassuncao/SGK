@@ -93,6 +93,14 @@
             android:label="Contato"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+
+        <service
+            android:name=".Activity.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
     </application>
 
 </manifest>
