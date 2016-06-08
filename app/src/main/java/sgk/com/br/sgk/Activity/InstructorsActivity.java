@@ -26,7 +26,7 @@ import sgk.com.br.sgk.R;
 /**
  * Created by Leonardo Assunção on 28/05/2016.
  */
-public class InstructorsActivity extends AppCompatActivity   implements NavigationView.OnNavigationItemSelectedListener {
+public class InstructorsActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private View mRootView;
     private Activity myActivity;
@@ -76,6 +76,10 @@ public class InstructorsActivity extends AppCompatActivity   implements Navigati
             finish();
         } else if (id == R.id.nav_belt_exam) {
             Intent i = new Intent(getApplicationContext(), BeltExamActivity.class);
+            startActivity(i);
+            finish();
+        } else if (id == R.id.nav_great_trains) {
+            Intent i = new Intent(getApplicationContext(), GreatTrainsActivity.class);
             startActivity(i);
             finish();
         } else if (id == R.id.nav_send) {

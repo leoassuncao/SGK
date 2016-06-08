@@ -36,6 +36,7 @@ import sgk.com.br.sgk.Activity.Belts.ThirdBrownBeltActivity;
 import sgk.com.br.sgk.Activity.Belts.YellowBeltActivity;
 import sgk.com.br.sgk.List.BeltExamKyus;
 import sgk.com.br.sgk.Adapter.BeltExamKyusAdapter;
+import sgk.com.br.sgk.List.WhereTrainList;
 import sgk.com.br.sgk.R;
 
 /**
@@ -145,6 +146,10 @@ public class BeltExamActivity extends AppCompatActivity implements NavigationVie
             finish();
         } else if (id == R.id.nav_instrutors) {
             Intent i = new Intent(getApplicationContext(), InstructorsActivity.class);
+            startActivity(i);
+            finish();
+        } else if (id == R.id.nav_great_trains) {
+            Intent i = new Intent(getApplicationContext(), GreatTrainsActivity.class);
             startActivity(i);
             finish();
         } else if (id == R.id.nav_send) {

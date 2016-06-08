@@ -5,27 +5,26 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
-import sgk.com.br.sgk.Adapter.NewsAdapter;
-import sgk.com.br.sgk.Provider.NewsProvider;
+import sgk.com.br.sgk.Adapter.InstructorAdapter;
+import sgk.com.br.sgk.Provider.InstructorProvider;
 import sgk.com.br.sgk.R;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+/**
+ * Created by f764542 on 08/06/2016.
+ */
+public class GreatTrainsActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private View mRootView;
     private Activity myActivity;
@@ -33,10 +32,9 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_great_trains);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -47,7 +45,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        this.loadNews();
+
     }
 
     @Override
@@ -66,18 +64,22 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_where_train) {
+        if (id == R.id.nav_home) {
+            Intent i = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(i);
+            finish();
+        } else if (id == R.id.nav_where_train) {
             Intent i = new Intent(getApplicationContext(), WhereTrainActivity.class);
             startActivity(i);
-        } else if (id == R.id.nav_instrutors) {
-            Intent i = new Intent(getApplicationContext(), InstructorsActivity.class);
-            startActivity(i);
+            finish();
         } else if (id == R.id.nav_belt_exam) {
             Intent i = new Intent(getApplicationContext(), BeltExamActivity.class);
             startActivity(i);
-        } else if (id == R.id.nav_great_trains) {
-            Intent i = new Intent(getApplicationContext(), GreatTrainsActivity.class);
+            finish();
+        } else if (id == R.id.nav_instrutors) {
+            Intent i = new Intent(getApplicationContext(), InstructorsActivity.class);
             startActivity(i);
+            finish();
         } else if (id == R.id.nav_send) {
             Intent i = new Intent(getApplicationContext(), ContactActivity.class);
             startActivity(i);
@@ -94,13 +96,7 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    private void loadNews() {
-        RecyclerView news = (RecyclerView) findViewById(R.id.news_list);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this.myActivity);
-        news.setLayoutManager(linearLayoutManager);
-        NewsAdapter adapter = new NewsAdapter(NewsProvider.provideNewsList(), this.myActivity);
-        news.setAdapter(adapter);
-    }
+
 
     public void openFacebook()  {
         try {
@@ -125,3 +121,4 @@ public class MainActivity extends AppCompatActivity
         }
     }
 }
+

@@ -1,4 +1,4 @@
-package sgk.com.br.sgk.Activity;
+package sgk.com.br.sgk.Others;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -14,6 +14,7 @@ import android.util.Log;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
+import sgk.com.br.sgk.Activity.GreatTrainsActivity;
 import sgk.com.br.sgk.R;
 
 /**
@@ -47,15 +48,15 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
      * @param messageBody FCM message body received.
      */
     private void sendNotification(String messageBody) {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, GreatTrainsActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
                 PendingIntent.FLAG_ONE_SHOT);
 
         Uri defaultSoundUri= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
-                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.logo))
-                .setSmallIcon(R.drawable.ic_trophy)
+                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.icon))
+                .setSmallIcon(R.drawable.ic_mail)
                 .setContentTitle("Shingetsukan Dojo")
                 .setContentText(messageBody)
                 .setAutoCancel(true)
