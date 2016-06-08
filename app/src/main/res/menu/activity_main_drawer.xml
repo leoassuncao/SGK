@@ -18,11 +18,18 @@
             android:id="@+id/nav_belt_exam"
             android:icon="@drawable/ic_trophy"
             android:title="Exame de Faixa" />
-        <item
-            android:id="@+id/nav_great_trains"
-            android:icon="@drawable/ic_table"
-            android:title="@string/great_trains" />
+
     </group>
+
+    <item android:title="Área Restrita">
+        <menu>
+            <item
+            android:id="@+id/nav_restricted_area"
+            android:icon="@drawable/ic_login"
+            android:title="Entrar" />
+
+        </menu>
+    </item>
 
     <item android:title="Comunicação">
         <menu>

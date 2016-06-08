@@ -5,8 +5,6 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -16,7 +14,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -29,6 +26,7 @@ public class MainActivity extends AppCompatActivity
 
     private View mRootView;
     private Activity myActivity;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +46,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         this.loadNews();
+
     }
 
     @Override
@@ -75,11 +74,11 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_belt_exam) {
             Intent i = new Intent(getApplicationContext(), BeltExamActivity.class);
             startActivity(i);
-        } else if (id == R.id.nav_great_trains) {
-            Intent i = new Intent(getApplicationContext(), GreatTrainsActivity.class);
-            startActivity(i);
         } else if (id == R.id.nav_send) {
             Intent i = new Intent(getApplicationContext(), ContactActivity.class);
+            startActivity(i);
+        } else if (id == R.id.nav_restricted_area) {
+            Intent i = new Intent(getApplicationContext(), RestrictedAreaActivity.class);
             startActivity(i);
         } else if (id == R.id.nav_facebook) {
             Toast.makeText(this, "Redirecionando... ", Toast.LENGTH_SHORT).show();
@@ -124,4 +123,7 @@ public class MainActivity extends AppCompatActivity
                     Uri.parse("http://instagram.com/shingetsukan")));
         }
     }
+
+
+
 }

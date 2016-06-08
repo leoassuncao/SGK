@@ -10,15 +10,14 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import sgk.com.br.sgk.Adapter.InstructorAdapter;
-import sgk.com.br.sgk.Provider.InstructorProvider;
+import com.firebase.client.Firebase;
+
+import sgk.com.br.sgk.Others.Constants;
 import sgk.com.br.sgk.R;
 
 /**
@@ -44,7 +43,6 @@ public class GreatTrainsActivity extends AppCompatActivity implements Navigation
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
 
     }
 
@@ -120,5 +118,6 @@ public class GreatTrainsActivity extends AppCompatActivity implements Navigation
                     Uri.parse("http://instagram.com/shingetsukan")));
         }
     }
+
 }
 
