@@ -86,6 +86,9 @@ public class WhereTrainActivity extends AppCompatActivity   implements Navigatio
         } else if (id == R.id.nav_send) {
             Intent i = new Intent(getApplicationContext(), ContactActivity.class);
             startActivity(i);
+        } else if (id == R.id.nav_restricted_area) {
+            Intent i = new Intent(getApplicationContext(), RestrictedAreaActivity.class);
+            startActivity(i);
         } else if (id == R.id.nav_facebook) {
             Toast.makeText(this, "Redirecionando... ", Toast.LENGTH_SHORT).show();
             openFacebook();
