@@ -54,6 +54,13 @@ public class RestrictedAreaActivity extends AppCompatActivity  implements Naviga
         startActivity(intent);
     }
 
+    private void loadMainView() {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+    }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -70,32 +77,22 @@ public class RestrictedAreaActivity extends AppCompatActivity  implements Naviga
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        if (id == R.id.nav_great_trains) {
+            Intent i = new Intent(getApplicationContext(), GreatTrainsActivity.class);
+            startActivity(i);
+        } else if (id == R.id.nav_back){
+            Intent i = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(i);
+        } else if (id == R.id.nav_logout){
+            mRef.unauth();
+            loadMainView();
+        } else {
+            Toast.makeText(this, "Em construção", Toast.LENGTH_SHORT).show();
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_logout) {
-            mRef.unauth();
-            loadLoginView();
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

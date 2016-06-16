@@ -5,7 +5,9 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -27,6 +29,7 @@ public class GreatTrainsActivity extends AppCompatActivity implements Navigation
 
     private View mRootView;
     private Activity myActivity;
+    private Firebase mRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +46,15 @@ public class GreatTrainsActivity extends AppCompatActivity implements Navigation
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Em construção", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
 
     }
 
@@ -63,30 +75,16 @@ public class GreatTrainsActivity extends AppCompatActivity implements Navigation
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
+            Intent i = new Intent(getApplicationContext(), RestrictedAreaActivity.class);
+            startActivity(i);
+        } else if (id == R.id.nav_back){
             Intent i = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(i);
-            finish();
-        } else if (id == R.id.nav_where_train) {
-            Intent i = new Intent(getApplicationContext(), WhereTrainActivity.class);
-            startActivity(i);
-            finish();
-        } else if (id == R.id.nav_belt_exam) {
-            Intent i = new Intent(getApplicationContext(), BeltExamActivity.class);
-            startActivity(i);
-            finish();
-        } else if (id == R.id.nav_instrutors) {
-            Intent i = new Intent(getApplicationContext(), InstructorsActivity.class);
-            startActivity(i);
-            finish();
-        } else if (id == R.id.nav_send) {
-            Intent i = new Intent(getApplicationContext(), ContactActivity.class);
-            startActivity(i);
-        } else if (id == R.id.nav_facebook) {
-            Toast.makeText(this, "Redirecionando... ", Toast.LENGTH_SHORT).show();
-            openFacebook();
-        } else if (id == R.id.nav_instagram) {
-            Toast.makeText(this, "Redirecionando...", Toast.LENGTH_SHORT).show();
-            openInstagram();
+        } else if (id == R.id.nav_logout){
+            mRef.unauth();
+            loadMainView();
+        } else {
+            Toast.makeText(this, "Em construção", Toast.LENGTH_SHORT).show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -94,30 +92,13 @@ public class GreatTrainsActivity extends AppCompatActivity implements Navigation
         return true;
     }
 
-
-
-    public void openFacebook()  {
-        try {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://facewebmodal/f?href=" + "https://www.facebook.com/ShingetsuKan-Karate-Do-Dojo-185814311516817/?fref=ts"));
-            startActivity(intent);
-        }catch(Exception e) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.facebook.com/appetizerandroid")));
-        }
+    private void loadMainView() {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
     }
 
-    public void openInstagram() {
-        Uri uri = Uri.parse("http://instagram.com/_u/shingetsukan");
-        Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
-
-        likeIng.setPackage("com.instagram.android");
-
-        try {
-            startActivity(likeIng);
-        } catch (ActivityNotFoundException e) {
-            startActivity(new Intent(Intent.ACTION_VIEW,
-                    Uri.parse("http://instagram.com/shingetsukan")));
-        }
-    }
 
 }
 

@@ -103,12 +103,12 @@
         </activity>
         <activity
             android:name=".Activity.LoginActivity"
-            android:label="@string/great_trains"
+            android:label="@string/login_button_label"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
             android:name=".Activity.SignUpActivity"
-            android:label="@string/great_trains"
+            android:label="@string/sign_up_text"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Início" />
+        <item
+            android:id="@+id/nav_hour_control"
+            android:icon="@drawable/ic_map_marker"
+            android:title="Controle de Horas" />
+        <item
+            android:id="@+id/nav_exams_grades"
+            android:icon="@drawable/ic_account_multiple"
+            android:title="Notas de Exame" />
+        <item
+            android:id="@+id/nav_great_trains"
+            android:icon="@drawable/ic_trophy"
+            android:title="Aulões" />
+
+    </group>
+
+    <item android:title="Geral">
+        <menu>
+            <item
+                android:id="@+id/nav_back"
+                android:icon="@drawable/ic_login"
+                android:title="Voltar" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_login"
+                android:title="Logout" />
+
+        </menu>
+    </item>
+
+
+</menu>
