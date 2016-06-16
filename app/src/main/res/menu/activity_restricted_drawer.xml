@@ -8,15 +8,15 @@
             android:title="Início" />
         <item
             android:id="@+id/nav_hour_control"
-            android:icon="@drawable/ic_map_marker"
+            android:icon="@drawable/ic_timetable"
             android:title="Controle de Horas" />
         <item
             android:id="@+id/nav_exams_grades"
-            android:icon="@drawable/ic_account_multiple"
+            android:icon="@drawable/ic_note"
             android:title="Notas de Exame" />
         <item
             android:id="@+id/nav_great_trains"
-            android:icon="@drawable/ic_trophy"
+            android:icon="@drawable/ic_walk"
             android:title="Aulões" />
 
     </group>
@@ -25,11 +25,11 @@
         <menu>
             <item
                 android:id="@+id/nav_back"
-                android:icon="@drawable/ic_login"
+                android:icon="@drawable/ic_back"
                 android:title="Voltar" />
             <item
                 android:id="@+id/nav_logout"
-                android:icon="@drawable/ic_login"
+                android:icon="@drawable/ic_logout"
                 android:title="Logout" />
 
         </menu>

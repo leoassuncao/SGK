@@ -83,6 +83,7 @@ public class RestrictedAreaActivity extends AppCompatActivity  implements Naviga
         } else if (id == R.id.nav_back){
             Intent i = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(i);
+            finish();
         } else if (id == R.id.nav_logout){
             mRef.unauth();
             loadMainView();
