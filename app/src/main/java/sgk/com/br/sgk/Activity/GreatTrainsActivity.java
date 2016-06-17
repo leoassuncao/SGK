@@ -1,13 +1,10 @@
 package sgk.com.br.sgk.Activity;
 
 import android.app.Activity;
-import android.content.ActivityNotFoundException;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -15,11 +12,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.ValueEventListener;
 
 import sgk.com.br.sgk.Others.Constants;
+import sgk.com.br.sgk.Others.Train;
 import sgk.com.br.sgk.R;
 
 /**
@@ -30,6 +33,8 @@ public class GreatTrainsActivity extends AppCompatActivity implements Navigation
     private View mRootView;
     private Activity myActivity;
     private Firebase mRef;
+    private TextView textViewPersons;
+    private FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +42,9 @@ public class GreatTrainsActivity extends AppCompatActivity implements Navigation
         setContentView(R.layout.activity_great_trains);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        textViewPersons = (TextView) findViewById(R.id.textViewPersons);
+
+        Firebase.setAndroidContext(this);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -47,15 +55,28 @@ public class GreatTrainsActivity extends AppCompatActivity implements Navigation
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        Firebase ref = new Firebase(Constants.FIREBASE_URL);
+
+        ref.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Em construção", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onDataChange(DataSnapshot snapshot) {
+                for (DataSnapshot postSnapshot : snapshot.getChildren()) {
+                    //Getting the data from snapshot
+                    Train train = postSnapshot.getValue(Train.class);
+                    //Adding it to a string
+                    String string = "Local: " + train.getLocal() + "\nDescrição: " + train.getDescription() + "\n\n";
+                    //Displaying it on textview
+                    textViewPersons.setText(string);
+                }
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+                System.out.println("The read failed: " + firebaseError.getMessage());
             }
         });
 
+      openAddTrainActivity();
     }
 
     @Override
@@ -101,5 +122,15 @@ public class GreatTrainsActivity extends AppCompatActivity implements Navigation
     }
 
 
+    private void openAddTrainActivity() {
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), AddTrainActivity.class);
+                startActivity(i);
+            }
+        });
+    }
 }
 

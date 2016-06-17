@@ -113,7 +113,12 @@
         </activity>
         <activity
             android:name=".Activity.RestrictedAreaActivity"
-            android:label="Restricted Area"
+            android:label="Resumo"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".Activity.AddTrainActivity"
+            android:label="Resumo"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
 
