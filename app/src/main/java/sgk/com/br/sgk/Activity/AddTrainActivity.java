@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.client.Firebase;
 
@@ -36,7 +37,10 @@ public class AddTrainActivity extends AppCompatActivity {
         editTextAddress = (EditText) findViewById(R.id.editTextAddress);
         textViewPersons = (TextView) findViewById(R.id.textViewPersons);
 
+        createTrain();
+        }
 
+    public void createTrain() {
         buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,6 +51,7 @@ public class AddTrainActivity extends AppCompatActivity {
                 train.setLocal(local);
                 train.setDescription(description);
                 ref.child("Train").setValue(train);
+                ref.push();
             }
         });
     }

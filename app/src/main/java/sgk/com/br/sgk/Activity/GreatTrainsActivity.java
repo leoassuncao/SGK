@@ -30,8 +30,6 @@ import sgk.com.br.sgk.R;
  */
 public class GreatTrainsActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    private View mRootView;
-    private Activity myActivity;
     private Firebase mRef;
     private TextView textViewPersons;
     private FloatingActionButton fab;
@@ -45,7 +43,6 @@ public class GreatTrainsActivity extends AppCompatActivity implements Navigation
         textViewPersons = (TextView) findViewById(R.id.textViewPersons);
 
         Firebase.setAndroidContext(this);
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -55,9 +52,8 @@ public class GreatTrainsActivity extends AppCompatActivity implements Navigation
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        Firebase ref = new Firebase(Constants.FIREBASE_URL);
-
-        ref.addValueEventListener(new ValueEventListener() {
+        mRef = new Firebase(Constants.FIREBASE_URL);
+        mRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
@@ -76,7 +72,7 @@ public class GreatTrainsActivity extends AppCompatActivity implements Navigation
             }
         });
 
-      openAddTrainActivity();
+       openAddTrainActivity();
     }
 
     @Override
@@ -121,7 +117,6 @@ public class GreatTrainsActivity extends AppCompatActivity implements Navigation
         startActivity(intent);
     }
 
-
     private void openAddTrainActivity() {
         fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -131,6 +126,7 @@ public class GreatTrainsActivity extends AppCompatActivity implements Navigation
                 startActivity(i);
             }
         });
+
     }
 }
 
